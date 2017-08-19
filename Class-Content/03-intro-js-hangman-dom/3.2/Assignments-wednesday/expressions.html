@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var age = prompt("what is your age?");
+			var age = parseInt(age);
+			alert(age)
+			if(age) age = prompt("what is your age?")
+			if(age >= 21){
+				alert("you can buy cigs")
+			}
+			else if(age >= 18 && age <= 21){
+				alert("can serve in the military");
+			}
+			else{
+				alert("you need a few more years...");
+			}
+			do {
+			    var age = parseInt(prompt(“What is your age”));
+			}
+			while (!age);
+			alert(“After one year, your age will be ” + (age + 1));
+
+		</script>
+	</body>
+</html>

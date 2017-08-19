@@ -1,0 +1,33 @@
+body {
+  font-size: 2em;
+}
+.content {
+  margin: 10px auto;
+  width: 600px;
+}
+
+/*
+  modify:
+  font-family
+  font-size
+  font-weight
+  line-height
+  letter-spacing
+  text-transform
+*/
+
+#one {
+  
+}
+
+#two {
+
+}
+
+#three {
+
+}
+
+.cursive {
+  font-family: 'UnifrakturCook', cursive;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<!-- EVERYTHING ELSE GOES UP HERE -->
+		<script>
+			/*
+			Continuing with your HTML Document:
+			Prompt the user for their name.
+			Confirm that they’d like to continue to the site.
+			If they choose to continue, alert a welcome message.
+			Otherwise, alert a goodbye message.
+			*/
+			var name = prompt("What's your name?") || "I don't have a name";
+			var continueToSite = confirm("Would you like to continue to the site?");
+			if(continueToSite)
+				alert("Welcome "+ name);
+			else
+				alert("Cya later "+ name);
+
+			//OR
+			/*
+			if(confirm("Would you like to continue to the site?"))
+				alert("Welcome "+ name);
+			else
+				alert("Cya later "+ name);
+				*/
+			console.log("why use this comma thing?",{"Test":"this is a test object","number":1});
+		</script>
+	</body>
+</html>

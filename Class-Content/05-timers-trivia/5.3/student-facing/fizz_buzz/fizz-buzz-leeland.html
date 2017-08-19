@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FizzBuzz</title>
+</head>
+
+<body>
+    <h2>FizzBuzz</h2>
+    <div id="fizzbuzz"></div>
+    <script>
+        const LENGTH = 100;
+        const fizzbuzz = document.getElementById('fizzbuzz');
+        
+        for (let i = 1; i <= LENGTH; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                fizzbuzz.innerHTML += 'FIZZBUZZ<br>';
+            } else if (i % 3 === 0) {
+                fizzbuzz.innerHTML += 'FIZZ<br>';
+            } else if (i % 5 === 0) {
+                fizzbuzz.innerHTML += 'BUZZ<br>';
+            } else {
+                fizzbuzz.innerHTML += i + '<br>';
+            }
+        }
+    </script>
+</body>
+</html>

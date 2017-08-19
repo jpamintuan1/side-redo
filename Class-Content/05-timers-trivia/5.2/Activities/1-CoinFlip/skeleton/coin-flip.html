@@ -1,0 +1,115 @@
+<!-- Coin Flip HTML -->
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Coin Flipper</title>
+
+  </head>
+
+  <body>
+
+    <!-- The html is done for us. -->
+    <h1>Flip A Coin!</h1>
+    <h2>Guess Heads or Tails:</h2>
+
+    <button id="heads">Heads</button>
+    <button id="tails">Tails</button>
+
+    <br>
+
+    <div> You guessed:
+      <span id="guess"></span>
+    </div>
+
+    <br>
+
+    <div id="coin-image"></div>
+
+    <div id="win-lose"></div>
+
+    <div id="win-loss-tracker">
+
+      <div>
+        <h3>Wins: </h3>
+        <span id="wins"></span>
+      </div>
+
+      <div>
+        <h3>Losses: </h3>
+        <span id="losses"></span>
+      </div>
+
+      <div>
+        <h3>Heads chosen: </h3>
+        <span id="heads-chosen"></span>
+      </div>
+
+      <div>
+        <h3>Tails chosen: </h3>
+        <span id="tails-chosen"></span>
+      </div>
+
+    </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+  <script type="text/javascript">
+
+    // Coin Flip JavaScript
+    // These variables are declared for us.
+    var headsCount = 0;
+    var tailsCount = 0;
+    var wins = 0;
+    var losses = 0;
+
+    function flipThatCoin(result) {
+        var randomNumber = Math.floor(Math.random() * 2);
+
+        if ( randomNumber === 0 ) {
+          $('#coin-image').html('<img src="http://random-ize.com/coin-flip/us-quarter/us-quarter-front.jpg">');
+        } else {
+          $('#coin-image').html('<img src="http://random-ize.com/coin-flip/us-quarter/us-quarter-back.jpg">');
+        }
+
+      if ( result === randomNumber ) {
+        wins++;
+        $('#wins').html(wins);
+        $('#win-lose').html('WINNER!');
+      } else {
+        losses++;
+        $('#losses').html(wins);
+        $('#win-lose').html('LOSER!');
+      }
+    }
+
+    // This on click function has been completed for us.
+    $("#heads").on("click", function() {
+      headsCount++;
+      $("#heads-chosen").html(headsCount);
+      $("#guess").html("<b>Heads</b>");
+      flipThatCoin(0);
+    });
+
+    $("#tails").on("click", function() {
+      tailsCount++;
+      $("#tails-chosen").html(tailsCount);
+      $("#guess").html("<b>Tails</b>");
+      flipThatCoin(1);
+      //  STEP FOUR:
+
+          //  Increment tailsCount by one.
+          //  Find the span with an id of tails-chosen. Replace the html inside of the span with the tailsCount.
+          //  Find the div with an id of guess. Update it with the word "Tails" bolded.
+          //  Call the flipThatCoin function and pass value 1 into it.
+
+    });
+
+    </script>
+
+  </body>
+
+</html>

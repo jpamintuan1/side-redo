@@ -1,0 +1,46 @@
+<!-- You are given an array of filenames. If the file is a video, move it to a new video array. If the file is an image, move it to a new image array.
+
+HINT: jpg, gif, jpeg, and png are all extensions for image files.
+      mov, avi, mpeg, mp4, and mpg are all extensions for video files. -->
+
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <title>File Extensions</title>
+
+  </head>
+
+  <body>
+
+    <script src="files.js"></script>
+    <script>
+      var pictures = [];
+      var movies = [];
+
+      var imageExtensions = ["jpg", "gif", "png", "jpeg"];
+      var videoExtensions = ["mov", "avi", "mp4", "mpeg", "mpg"];
+
+      for ( var i = 0; i < files.length; i++ ) {
+        console.log(files[i]);
+        var ext = files[i].split('.').pop();
+        if ( imageExtensions.indexOf(ext) > -1 ) {
+          pictures.push(files[i])
+        }
+        if ( videoExtensions.indexOf(ext) > -1 ) {
+          movies.push(files[i])
+        }
+      }
+      console.log('pictures', pictures);
+      console.log('movies', movies);
+
+    </script>
+
+  </body>
+
+</html>

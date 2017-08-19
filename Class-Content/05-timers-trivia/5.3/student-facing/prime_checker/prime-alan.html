@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>prime</title>
+</head>
+
+<body>
+</body>
+
+</html>
+<script>
+var number = prompt("enter number");
+
+//console.log(number + " is prime?: " + isPrime(number));
+
+document.write(number + " is prime?: " + isPrime(number));
+
+function isPrime(number) {
+    for (var i = Math.floor(number / 2); i > 1; i--) {
+    // for (var i = number - 1; i > 1; i--) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+</script>

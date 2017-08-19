@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<!-- EVERYTHING ELSE GOES UP HERE -->
+		<script>
+			/*
+Continuing with your HTML Document:
+Prompt the user for a value to find in the array.
+Loop through all values in the array, when you find theirs, alert the index.
+
+
+			*/
+			var array = ["frog","dog","bird","horse"];
+			//find an animal
+			var animal = prompt("what animal?");
+			for(var i = 0; i < array.length; i++){
+				if(array[i] == animal) alert(animal+"is at"+i);
+			}
+
+			//make animals cute, except horse, cause horseie isn't cute...
+			for(var i = 0; i < array.length; i++){
+				if(array[i] != "horse") array[i] = array[i]+"ie";
+			}
+			console.log(array);
+		</script>
+	</body>
+</html>

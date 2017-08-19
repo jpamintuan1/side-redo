@@ -1,0 +1,19 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 2;
+	font-size:16px;
+}
+
+h1, h2 {
+	font-family: 'Droid Serif', serif;
+}
+
+.jumbotron {
+	background: url("http://cdn.bloody-disgusting.com/wp-content/uploads/2015/10/dexterbanner.jpg") no-repeat center center;
+	background-size: 100% auto;
+}
+
+.jumbotron .container{
+	font-family: 'Droid Serif', serif;
+	padding:150px 0;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Clicked</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <style>
+    #pbj, #grillcheese, #roastbeef {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Click to Eat Sandwich</h1>
+  <h3 id="pbj">Peanut Butter Jelly</h3>
+  <h3 id="grillcheese">Grilled Cheese</h3>
+  <h3 id="roastbeef">Roast Beef</h3>
+
+  <div id="image-div"></div>
+
+  <script type="text/javascript">
+
+    // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
+    // This code makes sure that the JavaScript doesn't run until the HTML is finished loading
+    // It's useful to become familiar with now.
+
+    $(document).ready(function() {
+
+      // VARIABLES
+      // ====================================================================
+      // Here we create variables for tracking the number of sandwiches eaten
+      // ...
+      var pbjCount = 0;
+      var gcCount = 0;
+      var rbCount = 0;
+
+
+      // ...
+
+      // FUNCTIONS
+      // ====================================================================
+      // Here we create various on "click" functions which capture the clicks
+      // Inside each click event is the code to create an alert, update the counter, then show the updated count.
+      // ...
+      $('#pbj').click(function() {
+        pbjCount += 1;
+        console.log('from click()...', pbjCount);
+        $('#image-div').html('<img src="http://thesandwichguide.com/wp-content/uploads/sandwich.jpg">');
+        // 
+      });
+      $('#grillcheese').on('click', function() {
+        gcCount += 1;
+        console.log('clicked gc...', gcCount);
+        $('#image-div').html('<img src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/PDP/Menu%20Items%20Batch%201/Spicy-Chick-Fil-A-Sandwich/CFA_PDP_Spicy-Chick-Fil-A-Sandwich_1085.png">');
+      });
+      $('#roastbeef').on('click', function() {
+        rbCount += 1;
+        console.log('clicked rb...', rbCount);
+      });
+
+
+      // ...
+
+    });
+
+</script>
+
+</body>
+
+</html>

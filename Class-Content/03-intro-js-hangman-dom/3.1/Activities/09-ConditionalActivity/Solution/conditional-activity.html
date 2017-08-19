@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Steak Conditional Activity</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      // Here we ask the user if they eat steak, and store the result (true/false) in a variable.
+      var eatSteak = confirm("Do you eat steak?");
+
+      // If the user eats steak (eatSteak === true) we run the following code block.
+      if (eatSteak) {
+        document.write("Here's a steak");
+      }
+      // If the above condition isn't met (eatSteak !== true), run the following block of code instead.
+      else {
+        document.write("Here's a tofu stir fry!");
+      }
+
+      // Bonus
+      // Here we ask the user what year they were born, and store their response to a variable.
+      var age = prompt("How old are you?");
+
+      // If the user was born before 1995, alert "SAKE SAKE SAKE!"
+      if (age > 21 && age < 30) {
+        console.log("20s:  SAKE SAKE SAKE!");
+      }
+      // Else if the user was born after 1995, alert "No Sake for you!"
+      else if (age > 29 && age < 40) {
+        console.log("How about just one sake.");
+      }
+      
+    </script>
+
+  </body>
+</html>

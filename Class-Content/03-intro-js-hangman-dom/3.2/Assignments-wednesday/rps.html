@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			body {
+				text-align:center;
+			}
+			.image {
+				width:100px;
+				margin-right:50px;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="rock" onclick="play(0)" class="image" src="http://www.smashingmagazine.com/images/space-explosion-photoshop-tutorial/65.jpg"/>
+		<img id="paper" onclick="play(1)" class="image" src="https://cdn.pixabay.com/photo/2015/09/06/20/31/origami-927766_960_720.jpg"/>
+		<img id="scissor" onclick="play(2)" class="image" src="https://images-production.global.ssl.fastly.net/uploads/photos/file/188627/johnny-depp-edward-scissorhands.jpg">
+		<h3 id="what"></h3>
+		<h1 id="result"></h1>
+		<script>
+			function play(choice){
+				var comp = Math.floor(Math.random()*3);
+				var win = 0;
+				var choices = ["rock","paper","scissors"]
+				console.log("play: ",choices[choice],choices[comp]);
+				if(choice === comp){
+					//tie
+				}
+				else if(choice === 0){//rock
+					if(comp === 1)
+						win = -1;
+					else
+						win = 1;
+				}
+				else if(choice === 1){//paper
+					if(comp === 0)
+						win = 1;
+					else
+						win = -1;
+				}
+				else if(choice === 2){//scissors
+					if(comp === 0)
+						win = -1;
+					else
+						win = 1;
+				}
+				document.getElementById("what").innerHTML = "Computer picked "+choices[comp];
+				if(win === 1)
+					document.getElementById("result").innerHTML = "Player Wins";
+				else if(win === -1)
+					document.getElementById("result").innerHTML = "Computer Wins";
+				else
+					document.getElementById("result").innerHTML = "EVERYONE LOSES!!!!";
+				console.log(win)
+			}
+		</script>
+	</body>
+</html>

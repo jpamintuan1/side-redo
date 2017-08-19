@@ -1,0 +1,26 @@
+/**
+ * Float Stylesheet
+ **/
+
+/* content1 starts the float and will rest at the top-left corner of its enclosing element */
+.content1 {
+  float: left;
+  margin-right: 10px;
+  width: 50%;
+}
+
+/* content2 continues the left float; it will sit at the right side of content1 */
+.content2 {
+  float: left;
+  width: 49%;
+}
+
+.content1 img, .content2 img {
+  width: 100%;
+}
+
+/* copyright stops or 'clears' the float */
+.copyright {
+  clear: both;
+  /*float: right;*/
+}

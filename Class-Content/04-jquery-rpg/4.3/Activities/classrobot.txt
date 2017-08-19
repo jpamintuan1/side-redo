@@ -1,0 +1,71 @@
+Abstract meet in the middle
+ if distance 1 step apart run high five then break loop
+ 	ask pathfinder how far
+Determine where other robot is
+turn towards other robot
+try to take step
+    Evaluate if possible to take another step
+        if possible loop
+        else
+        turn (ask pathfinder which direction)
+        take step
+        iterate
+
+navigate () {
+
+    turntoFace() {
+        //Turninggroupdidthis
+    }
+    Robot.turntoFace(turnedValue) {
+    if (turnedtoValue = true) {
+    Var targetlocation = (x1 + x2 / 2, y1 + y2/2);
+
+
+
+}
+
+
+function extendFinger(finger) {
+    // extend finger
+}
+
+function openHand() {
+  extendFinger(finger1);
+  extendFinger(finger2);
+  extendFinger(finger3);
+  extendFinger(finger4);
+  extendFinger(finger5);
+}
+
+function hand.move(pos){
+    // translate hand to pos
+}
+
+function highFive(){
+    openHand();
+    get hand1.position;
+    get hand2.position;
+    while (hand1.position != hand2.position){
+        hand1.move(hand2.position);
+        hand2.move(hand1.position);
+        get new hand1.position;
+        get new hand2.position;
+    }
+}
+var stepHeight = x;
+var stepLength = y;
+var leftLeg = x-position 0;
+var rightLeg = x-position 0;
+
+function walk() {
+    rightLeg up by stepHeight;
+    rightLeg forward by stepLength;
+    rightLeg down by stepHeght;
+    leftLeg up by stepHeight;
+    leftLeg forward by stepLength;
+    leftLeft down by stepHeight;
+}
+
+function gather() {
+    // brings rightLeg and leftLeg to reset position to same x value;
+}

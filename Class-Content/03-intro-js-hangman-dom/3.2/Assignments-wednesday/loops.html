@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var animalnames = ["lion", "tiger", "bear", "eagle", "sloth"];
+			var userAnimal = prompt("what's your favorite animal?");
+			for(var i = 0; i < animalnames.length; i++){
+				if(animalnames[i] == "lion"){
+					alert("rawr")
+				}
+				else if(animalnames[i] == "tiger"){
+					alert("I'm a tiger.")
+				}
+				else if(animalnames[i] === userAnimal){
+					alert("those are tasty bbq!")
+				}
+			}
+		</script>
+	</body>
+</html>
